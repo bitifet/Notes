@@ -7,6 +7,12 @@ Entorn:
 	Emulació/Simulació:
 		Android: Emulador Android.
 		IOS: Simulador IOS: xcode 6 (AppleStore)
+	Transferència:
+		a) Copiar l'apk.
+		b) Via usb:
+			http://developer.android.com/tools/device.html
+			Activar depuració usb.
+			$ cordova run android
 
 Procés.
 	1. Idea
@@ -48,6 +54,9 @@ Cordova:
 		$ cordova build android
 
 
+
+
+
 APIs HTML5 rellevants:
 	Canvas.
 	Video
@@ -68,6 +77,12 @@ Recursos:
 		http://www.genymotion.com/
 			Virtualbox: $ sudo apt-get install virtualbox
 			Genymotion: $ chmod ./genymotion-2.3.0_x86.bin && ./genymotion-2.3.0_x86.bin
+	Android:
+		http://developer.android.com/tools/device.html
+	Cordova:
+		cordova.apache.org
+	Phonegap:
+		docs.phonegap.com
 
 
 Investigar:
