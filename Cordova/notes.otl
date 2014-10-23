@@ -1,0 +1,78 @@
+Generalitats:
+	Professor: Josep Llodrà
+
+Entorn:
+	IDE
+		vim :-P
+	Emulació/Simulació:
+		Android: Emulador Android.
+		IOS: Simulador IOS: xcode 6 (AppleStore)
+
+Procés.
+	1. Idea
+	2. Prototip / Wireframe / UX
+	3. Programació.
+	5. Test.
+	6. Empaquetat.
+	7. Test.
+	8. Deploy.
+
+Phonegap:
+	Instal·lació:
+		http://phonegap.com/install/
+			Install:
+				$ sudo npm install -g phonegap
+			Usage:
+				$ phonegap create my-app
+				$ cd my-app
+				$ phonegap run android
+			Notes:
+				El 'run' no funciona sense el SDK d'Android.
+				http://stackoverflow.com/questions/22551453/phonegap-error-an-error-occurred-while-listing-android-targets-while-installi
+					Descarregar SDK de https://developer.android.com/sdk/installing/index.html?pkg=tools
+					Desempaquetar-la.
+					export PATH=${PATH}:/home/me/opt/adt-bundle/sdk/platform-tools:/home/me/opt/adt-bundle/sdk/tools
+				Faltava també el Java:
+					$ sudo apt-get install default-jdk
+		Altres:
+			sudo apt-get install ant
+			sudo npm -g install cordova
+
+Cordova:
+	Lo mateix, però millor:
+		$ sudo npm install -g cordova
+		$ cordova create 112go com.bitifet.seib112go 112go
+		$ cd 112go
+		$ vim config.xml
+		$ cordova platform add android
+		$ cordova build android
+
+
+APIs HTML5 rellevants:
+	Canvas.
+	Video
+	Local Storage
+	Web Workers.
+	Offline
+	Geolocalization.
+	Input 
+	History.
+
+Recursos:
+	Html5:
+		http://caniuse.com/
+		http://diveintohtml5.info
+	jQuery Mobile:
+		http://www.w3schools.com/jquerymobile/
+	Emuladors:
+		http://www.genymotion.com/
+			Virtualbox: $ sudo apt-get install virtualbox
+			Genymotion: $ chmod ./genymotion-2.3.0_x86.bin && ./genymotion-2.3.0_x86.bin
+
+
+Investigar:
+	css3 ("transform-3d" per fer servir accel·leració gràfica per a les animacions).
+
+
+
+
