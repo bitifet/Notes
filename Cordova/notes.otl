@@ -54,7 +54,27 @@ Cordova:
 		$ cordova build android
 
 
+Depuració:
+	adb (Adroid Debug Bridge)
+		Instal·lació: 
+			$ sudo apt-get install android-tools-adB
+	Comandes:
+		Llistar emuladors / dispositius.
+			$ adb devices
+		Log:
+			$ adb logcat CordovaLog:D *:S
 
+
+Optimització:
+	Tamany:
+		Eliminar fitxers innecessaris "packs" de llibreries.
+			Demos de jQuery Mobile.
+			(Opcionalment) determinar les imatges que no es fan servir i eliminar-les després.
+			En no haver de depurar més:
+				Fer servir versió minimitzada (i eliminar completa).
+				Eliminar també els .map
+			Minimitzar js i (s)css.
+			Compactar mòduls RequireJS (si els fem servir) amb r.js.
 
 
 APIs HTML5 rellevants:
