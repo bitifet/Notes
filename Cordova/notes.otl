@@ -52,6 +52,15 @@ Cordova:
 		$ vim config.xml
 		$ cordova platform add android
 		$ cordova build android
+	Plugins:
+		cordova plugin list
+		cordova plugin add
+		cordova plugin remove
+		Repositori de plugins: http://plugreg.com
+	Emuladors:
+		Ripple Emulator (Plugin chromium)
+			Emula entorn cordova (botons, etc...).
+
 
 
 Depuració:
@@ -86,6 +95,23 @@ APIs HTML5 rellevants:
 	Geolocalization.
 	Input 
 	History.
+
+
+jQuery Mobile:
+	Event tap:
+		Té un delay associat per esperar "doble tap".
+		Alternatives:
+			Event vclick de jQuery-Mobile.
+			Plugin perquè faci servir vclick per defecte:
+				https://github.com/justinmc/jquery.mobile.fastButtons
+	Esperes:
+		mobile.loading("show"/"hide");
+		Es pot personalitzar via css al selector .ui-loader-background
+			Imatge de fons
+			Marges
+			Transparència...
+
+
 
 Recursos:
 	Html5:
