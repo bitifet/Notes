@@ -112,13 +112,62 @@ jQuery Mobile:
 			Transparència...
 
 
+Markets:
+	Signar aplicacions.
+		Android:
+			Procés:
+				1. Crear un keystore.
+				2. Crear una clau privada.
+				3. Generar el projecte sense signar.
+				4. Signar el paquet amb la clau privada.
+			a) Android Studio.
+				http://developer.android.com/tools/publishing/app-signing.html
+			b) Cordova: (Fent servir keytool)
+				$ keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+				Dir-li al ant d'ón ha de treure la clau creant el fitxer:
+					platforms/android/ant.properties
+					Contingut:
+						key.store=/home/joanmi/.etc/private/jmAndroid.keystore
+						#key.store.password=
+						key.alias=
+						#key.alias.password=
+					Compilació:
+						$ cordova build --release android
+						NOTA: Si deixam comentada la clau al fitxer la demanarà, però el mostrarà en pantalla!!
+
+		Ios
+			Xcode
+	Distribuir aplicacions (Markets).
+		Google Play (apk).
+			Google Play Developer Console:
+				https://play.google.com/apps/publish/?dev_acc=09928233378559047600#AppListPlace
+				...o dirèctament google developer console al google :-P
+			Emplenar formularis, pujar icones, captures de pantalla, wallpapers...
+			Burocràcia i més burocràcia...
+			Pujar l'apk com a Alpha, Beta o Producció.
+				Si és alpha o beta no s'hi podrà accedir (ni el propi autor) si no s'afegeix grup de desenvolupadors autoritzats.
+					https://support.google.com/googleplay/android-developer/answer/3131213?hl=es
+			API automatització:
+				http://stackoverflow.com/questions/14665518/api-to-automatically-upload-apk-to-google-play
+		Amazon (apk).
+		Apple Store
+
+
+Investigar:
+	css3 ("transform-3d" per fer servir accel·leració gràfica per a les animacions).
+
 
 Recursos:
 	Html5:
 		http://caniuse.com/
 		http://diveintohtml5.info
+		http://html5demos.com/
+		https://developer.chrome.com/devtools
+		Altres:
+			http://www.html5rocks.com/en/
 	jQuery Mobile:
 		http://www.w3schools.com/jquerymobile/
+		http://jquerymobile.com/
 	Emuladors:
 		http://www.genymotion.com/
 			Virtualbox: $ sudo apt-get install virtualbox
@@ -127,13 +176,27 @@ Recursos:
 		http://developer.android.com/tools/device.html
 	Cordova:
 		cordova.apache.org
+		Plugins:
+			http://plugreg.com/
 	Phonegap:
+		http://phonegap.com/
 		docs.phonegap.com
-
-
-Investigar:
-	css3 ("transform-3d" per fer servir accel·leració gràfica per a les animacions).
-
+		https://github.com/phonegap/phonegap/wiki
+		https://github.com/phonegap/phonegap-cli
+		http://configap.com/
+	Javascript:
+		https://developer.mozilla.org/es/docs/Web/JavaScript
+		http://addyosmani.com/resources/essentialjsdesignpatterns/…/
+	Unsorted:
+		https://developer.android.com/sdk/index.html?hl=i
+		http://www.luster.io/blog/9-29-14-mobile-web-checklist.html
+		https://www.fluidui.com/editor/live/
+		http://www.gajotres.net/secrets-of-a-good-jquery-mobile-page-architecture/
+			molts bons articles sobre jquery-mobile, phonegap, etc:
+				http://www.gajotres.net/tag/jquery-mobile-2/
+		http://devgirl.org/2014/04/09/phonegapcordova-cli-adding-plugins/
+		http://www.smashingmagazine.com/…/providing-a-native-exper…/
+		http://slides.com/dcfusion/introduction-to-phonegap-development#/
 
 
 
