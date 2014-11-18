@@ -148,6 +148,7 @@ Markets:
 				Si és alpha o beta no s'hi podrà accedir (ni el propi autor) si no s'afegeix grup de desenvolupadors autoritzats.
 					https://support.google.com/googleplay/android-developer/answer/3131213?hl=es
 			API automatització:
+				https://developers.google.com/android-publisher/
 				http://stackoverflow.com/questions/14665518/api-to-automatically-upload-apk-to-google-play
 		Amazon (apk).
 		Apple Store
@@ -165,6 +166,7 @@ Recursos:
 		https://developer.chrome.com/devtools
 		Altres:
 			http://www.html5rocks.com/en/
+			http://davidwalsh.name/more-html5-apis
 	jQuery Mobile:
 		http://www.w3schools.com/jquerymobile/
 		http://jquerymobile.com/
@@ -197,6 +199,7 @@ Recursos:
 		http://devgirl.org/2014/04/09/phonegapcordova-cli-adding-plugins/
 		http://www.smashingmagazine.com/…/providing-a-native-exper…/
 		http://slides.com/dcfusion/introduction-to-phonegap-development#/
+
 
 
 
