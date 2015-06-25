@@ -1,0 +1,36 @@
+
+
+
+Bibliografia:
+	Express:
+		http://expressjs.com/4x/api.html
+	WebSockets:
+		http://blog.teamtreehouse.com/an-introduction-to-websockets
+	Articles:
+		On problems with threads:
+			http://www.future-processing.pl/blog/on-problems-with-threads-in-node-js/?utm_campaign=Technical%20blog&utm_medium=social&utm_source=twitter
+	Altres:
+		http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js
+	NPM:
+		DOM-JS: https://www.npmjs.com/package/dom-js
+	Node Tutorial:
+		Part 1: Introduction
+			http://dailyjs.com/2010/11/01/node-tutorial/
+		Part 2: Installation and Skeleton App, source code commit: 4ea936b
+			http://dailyjs.com/2010/11/08/node-tutorial-2/
+		Part 3: RESTful Methods and Testing, source code commit: 39e66cb
+			http://dailyjs.com/2010/11/15/node-tutorial-3/
+		Part 4: Templates, Partials, Creating and Editing Documents, source code commit: f66fdb
+			http://dailyjs.com/2010/11/22/node-tutorial-4/
+		Part 5: Authentication, Sessions, Access Control Middleware, source code commit: 03fe9b
+			http://dailyjs.com/2010/12/06/node-tutorial-5/
+		Part 6: Interface Basics, source code commit: f2261c
+			http://dailyjs.com/2010/12/20/node-tutorial-6/
+		Part 7: Node Library Versions, Jade Tricks, Error Pages, source code commit: 929f5
+			http://dailyjs.com/2010/12/27/node-tutorial-7/
+		Part 8: 
+			http://dailyjs.com/2011/01/03/node-tutorial-8/
+
+
+
+
