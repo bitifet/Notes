@@ -1,6 +1,11 @@
 
 
 
+
+
+
+
+
 Bibliografia:
 	Express:
 		http://expressjs.com/4x/api.html
@@ -15,6 +20,8 @@ Bibliografia:
 		http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js
 	NPM:
 		DOM-JS: https://www.npmjs.com/package/dom-js
+	NVM (Node Version Manager):
+		https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server
 	Node Tutorial:
 		Part 1: Introduction
 			http://dailyjs.com/2010/11/01/node-tutorial/
@@ -34,5 +41,8 @@ Bibliografia:
 			http://dailyjs.com/2011/01/03/node-tutorial-8/
 
 
+Links: (a revisar):
+	Express:
+		(Autenticació) http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/#.VZzrZKH7s_s
 
 
