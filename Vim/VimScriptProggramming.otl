@@ -1,0 +1,197 @@
+Vim Script Programming
+	Programmable interface
+		vim script
+		Perl / Python / Ruby / Mzscheme ...
+	Outline - Vim Script
+		Comment
+		Variable
+			Variable scope
+			Special Variable
+		Function
+			function scope
+			built-in function
+		Condition
+		Looping
+		Command
+		Mapping
+		Completion
+		Autocommand
+		Autogroup
+		Utility
+			vim-makefile
+	Prepare
+		Region Eval
+			http://gist.github.com/444528
+			* Press 'V' then select region
+			* Press 'e' to evaluate region
+	To run script
+		:source [filename]
+		:source %  # current file
+	Debugging
+		:messages
+		:set verbose=10 "verbose mode
+		:verbose *command*
+	HELP
+		section		:help *section*
+		option		:help 'option_name'
+		mode		:help [icv]_...
+		command		:help :command_name
+	Alias
+		source => so
+			:so
+		function => func
+			:func Foo(bar)
+		endfunction => endf
+			:endf
+	Variable
+		let variable = 123
+		let string = "string"
+		let list = [1,2,3]
+		let strlist = ["bar", "foo"]
+		let dict = {'phone':'01234567'}
+		let dict.name = "Chopin"
+		echo dict
+	Variable Scope
+		non-prefix = global
+		g: global
+		s: script
+		b: buffer
+		v: vim built-in
+		a: function arguments
+	Variable Scope Examples
+		let var = "string"
+		let g:var_global = "global"
+		let s:var_script = "script"
+		let b:var_buffer = "buffer"
+	Condition
+		if boo > 2
+		elsif str == "string"
+		elsif str =~ '[a-z]+'
+		endif
+	Looping
+		while running == 1
+			echo "Run..."
+		endwhile
+		for i in [1,2,3,4]
+			...
+		endfor
+		for i in range(1,10)
+			" i = 1 ~ 10
+		endfor
+	Function
+		fun! Test()
+			.. blah
+		endf
+		NOTES:
+			! -> Override
+			Test() -> Begins with uppercase.
+		call Test() " no return value
+	Function returning value
+		fun! Test()
+			.. blah
+			return 3
+		endf
+		let ret = Test() " Return 3
+	Function arguments
+		fun! Foo(bar)
+			echo a:bar
+				" non-modifiable
+		endf
+		fun! Foo(...)
+			echo a:000
+				" count of args
+			echo a:001
+				" arg 1
+		endf
+	Function Scope
+		fun! s:Foo()
+			" Script Scope
+		endf
+		fun! g:Foo()
+			" Global Scope
+		endf
+		fun! b:Foo()
+			" Buffer Scope
+		endf
+	Built-in Functions: *function-list*
+		List related:
+			add(), remove(), filter(), map(), len(), sort(), empty(), join(), range()...
+		Dictionary related:
+			keys(), values(), has_key(), has_value(), extend()...
+		String related:
+			stridx(), strridx(), strlen(), substitute, submatch(), strpart(), expand()...
+		Buffer related:
+			bufnr(), bufexists(), buflisted(), bufname()...
+		Window related:
+			winbufnr(), bufwinnr(), winnr()
+		Misc:
+			getreg(), setreg(), system(), eventhandler(), getpid()...
+	Autoload function
+		Define your library function:
+			~/.vim/autoload/foo.vim
+				fun! foo#blah()
+					...
+				endf
+		In your script:
+			call foo#blah()
+	Command
+		com! -range DoWrite :write
+			" com! [flags] new_command_name commands_to_execute
+		Define line range for command:
+			-range
+			-range=%
+			-range=N
+			-count=N
+		Other options:
+			-bang
+			-bar
+			-register
+			-buffer
+			-complete=[type]
+		Template arguments:
+			<line1>,<line2>
+			<count>
+			<bang>
+			<reg>
+			<args>
+			<f-args>
+			<q-args>
+			<lt>
+	Syntax:
+		syn list
+		syn keyword [ID]...
+		syn match [ID]...
+		syn region [ID]...
+		hi [ID] [Attributes]
+	Runtime directory:
+		~/.vim/
+			after
+			autoload
+			colors
+			doc
+			fdetect
+			ftplugin
+				c
+				cabal
+				cg
+				...
+			indent
+			plugin
+			syntax
+				c
+				javascript
+				perl
+	Utilities
+		vim-makefile
+		vim-uploader
+		Vimana
+	Vim Makefile
+		make install
+		make uninstall
+		make link
+		make dist
+	Thanks
+		http://github.com/c9s
+
+
+

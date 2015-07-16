@@ -1,9 +1,31 @@
 
 
 
+Tutorials:
+	http://nodeschool.io
 
 
 
+Web servers:
+	http
+	Express
+
+
+Debugging
+	Native:
+		node debug
+		node --debug
+		node --debug break
+	Node-inspector
+		Available in npm.
+		Browser environment.
+	Console.log
+	Overwritting native functions ;-)
+Unit Testing
+	testing
+		https://www.npmjs.com/package/testing
+		npm install --save testing
+	grunt (testnig + grunt)
 
 
 Bibliografia:
