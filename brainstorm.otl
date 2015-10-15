@@ -1,0 +1,57 @@
+
+
+
+ui-router
+	Technology
+		Client
+			html5
+			ES6
+			history
+			local-storage
+		Server
+			ES6
+			NodeJS
+			Express
+			PASAR
+	Concept
+		Server
+			Single layout template
+			Routes
+				Page template
+				Page model
+				Other data
+			Concept:
+				All routes serve:
+					Same layout.
+					Same javascript app.
+					Model data.
+					Rendered Template in its actual container.
+		Client
+			SPA (Single Page Application)
+				But it seems not:
+					distinct url =>
+						Distinct entry point.
+						Same container.
+						Same app.
+				...and actually sometimes isn't:
+					Browsers not supporting history will completely reload pages ending up with same contents.
+			Javascript app:
+				Knows that page loaded contains rendered page corresponding to actual url.
+				Manages history
+					Intercept history change:
+						Obtain new template and model corresponding to new URL.
+						HIDE (but not drop) previous page.
+						Render new template using corresponding model data.
+						When returning to visited url (even "back" or by user navigation), show already rendered page instead of reloading.
+		App
+			Designed to run either in browser or packed in mobile-app packed thought cordova.
+			That is:
+				One server.
+				One client codebase.
+				Multiple effective clients:
+					Web.
+					Android.
+					Etc...
+
+
+
