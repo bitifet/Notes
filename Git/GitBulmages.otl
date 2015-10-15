@@ -1,0 +1,131 @@
+==== Migrando a GIT ====
+
+Capítulo I
+	Desde el departamento de desarrollo hemos decidido que viene siendo hora que migremos de SVN a GIT con todas las ventajas que eso supone (basta ver a nuestros vecinos como Gnome, KDE, o el propio kernel Linux!, que llevan usandolo desde hace tiempo). Así pues, nosotros no seremos menos, y como somos pocos desarrolladores, hemos calculado que lo tendremos todo migrado antes del día  21 de Abril, y así luego de Semana Santa, podremos usar GIT hasta con los ojos cerrados. ¡Así que a ponerse las pilas!
+	Personalmente me estoy encargando de lo que es la migración de ramas, tags, y demás. Pero ahora mismo ya podéis descargaros lo que sería en svn conociamos como "trunk" (ya os avisaré cuando esten disponibles las ramas y tags).
+	Y como no quiero que os deis de bruces contra la pared, os iré enseñando a lo largo de estos días, como funciona GIT.
+	Para empezar, instalamos GIT en nuestro sistema (usualmente se llama git-core), ya sea apt-get, yum, yast...
+	1.) Nos descargamos el código fuente:
+		git clone ssh://VUESTRO_NICK_EN_BERLIOS@git.berlios.de/gitroot/bulmages bulmages.git
+		Con esto lo que hacemos es clonar el repositorio entero de GIT (trunk) en nuestro PC.
+	2.) Antes de hacer nada más, deberemos indicarle a GIT cual es nuestro email y nombre real.
+		git config user.name "Nombre Real que tenemos en Berlios"
+		git config user.email nuestroemail@dominio.com
+		GIT requiere estos pequeños datos, para poder hacer estadísticas. logs y otras cosas.
+		NOTAS:
+			Para hacer esto hay que entrar al directorio "bulmages" que se crea cuando se baja el "trunk". 
+			De todas maneras, si quereis podéis realizar:
+				git config --global user.name "Nombre Real que tenemos en Berlios"
+				git config --global user.email nuestroemail@dominio.com
+			Con esto lo que conseguireis es que se guarde en vuestro $HOME/.gitconfig y use ese nombre e email por defecto en todos los proyectos GIT.
+	3.) Antes de enviar cambios o para recibir las nuevas actualizaciones del repositorio, hay que hacer:
+		git pull
+	4.) Ahora ya podemos enviar cambios:
+		git commit -a (Te pide que escribas un comentario)
+		git push
+	5) Practicar, practicar, practticar... ;-D
+		En los próximos días recibiréis más noticias del "Departamento de Migraciones".
+
+Capítulo II
+	Ya sabeis clonar, configurar, actualizar y subir cambio. Ahora algo sencillito, vamos a aprender, a añadir, renombrar y eliminar.
+	Antes de nada actualizamos:
+		1.) git pull
+	* Hemos creado un nuevo archivo o directorio, y todavía no están en el repositorio. Para añadirlos hay que hacer:
+		1.) git add <NOMBRE_ARCHIVO_O_DIRECTORIO>
+		2.) git commit -a
+		3.) git push
+	*. Queremos mover un archivo o directorio existente o solo renombrarlo, para eso hacemos:
+		1.) git mv <ARCHIVO_O_DIRECTORIO_VIEJO> <ARCHIVO_O_DIRECTORIO_NUEVO>
+		2.) git commit -a
+		3.) git push
+	*. Queremos borrar un archivo o directorio
+		1.) git rm <ARCHIVO_O_DIRECTORIO_A_ELIMINAR>
+		2.) git commit -a
+		3.) git push
+
+Capítulo III
+	Así como ayer os enseñé algo sencillo, ahora vamos a aprender como resolver conflictos.
+	Recordad, siempre antes de empezar:
+		1.) git pull
+	* En caso de conflicto hay que proceder de la siguiente manera:
+		1.) Editar los archivos con conflictos que nos dicta GIT.
+		2.) git add <ARCHIVOS_CON_CONFLICTOS_RESUELTOS>
+		3.) git commit -a
+		4.) git push
+	* Podemos ver si queda algo más por solucionar o por añadir con:
+		1.) git status
+			Los corregidos aparecen con el atributo Modified.
+			Los archivos nuevos aparecen con New.
+			Los archivos en conflicto aparecen con Unmerged.
+
+Capitulo IV
+	Prosigamos con las enseñanzas de GIT, vamos a manejarnos entre las ramas de una manera sencilla.
+	Se ha reportado un bug en la rama estable y queremos resolverlo.
+		* Actualizamos como siempre nuestro código
+			0.) git pull
+		* Creamos una nueva rama en base a la rama master.
+			0.) git checkout --track -b master-fix origin/master
+				 --track = permite actualizar estando dentro de la nueva rama
+				 master-fix = nombre nueva rama
+				 origin/master = rama principal
+			1.) Realizamos nuestro trabajo [editar,commit]
+			2.) git rebase -i master
+				Nos abrirá nuestro editor, mostrandonos los commits con diversas opciones
+				 pick = Coge el commit
+				 squash = Coge el commit, pero lo adjunta al anterior
+				 edit = edita el commit.
+				 Recomendado: primer commit "pick", resto "squash", logrando
+				 fusionarlos en un super-commit.
+		* Volvemos a la rama master y mezclamos los cambios.
+			1.) git checkout master
+			2.) git pull
+			3.) git merge master-fix
+			4.) Solucionamos los conflictos si se diera el caso { Ver Capítulo III }.
+			5.) git push
+		* Si queremos eliminar la rama master-fix, porque ya no la necesitamos:
+			1.) git branch -d master-fix
+
+Capitulo V
+	Hoy os voy a mostrar algunas herramientas gráficas, y enlaces de utilidad.
+	RabbitVCS (GTK):
+		Permite la navegación y cambios en los repositorios, sintaxis
+		resaltada, comparación, manejo de ramas e integración con Nautilus y
+		Thunar.
+		Enlace: http://rabbitvcs.org/
+	Qgit (QT):
+		Programado en Qt, mismas funcionalidades que RabbitVCS pero no tiene
+		integración con el escritorio.
+		Enlace: http://digilander.libero.it/mcostalba/
+	GIT-Gui, GitK (Tcl/Tk):
+		GIT-Gui permite el control de nuestros repositorios, y GitK su navegación.
+		Son una extensión de GIT (por separado). Y se ejecutan con “git gui” y “gitk” respectivamente.
+	GIT en otros sistemas:
+		Windows: https://code.google.com/p/msysgit
+		MacOSX: https://code.google.com/p/git-osx-installer
+	Más herramientas para GNU/Linux y otros sistemas en:
+		https://git.wiki.kernel.org/index.php/Interfaces,_frontends,_and_tools
+	Manuales:
+		http://progit.org/book/es/index.html
+		http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/es/index.html
+	Chuletas
+		http://help.github.com/git-cheat-sheets/
+		http://cheat.errtheblog.com/s/git/
+		http://es.gitready.com/
+	Con esto acaba nuestra introducción a GIT, espero que os hayan servido de ayuda todos estos emails, a partir del Miércoles GIT será el único repositorio que tendremos activo, aprovecho para dar las gracias nuevamente por vuestra colaboración haciendo que esta migración haya sido posible.
+	Happy coding dear Giters!
+
+
+Autor:
+	Daniel Ripoll
+		TODO-REDES
+		C/.Begonia, 12 - 07010 Palma de Mallorca.
+		Tel: +34-971499071
+		http://www.todo-redes.com
+		comercial(en)todo-redes.com
+Colaboraciones:
+	Fco. Javier M.C
+		TODO-REDES
+		C/Begònia 12 - 07010 Palma de Mallorca.
+		Tel.: +34-971499071
+		http://www.todo-redes.com
+

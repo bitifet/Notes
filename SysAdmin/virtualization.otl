@@ -1,0 +1,23 @@
+
+
+
+Virtualbox HD images (.vdi):
+	Attach:
+		DEPENDS: sudo apt-get install qemu-utils
+		sudo modprobe nbd max_part=16
+			Without max_part option kernel doesn't see partitions.
+			...At least in Linux 3.2.0-4-amd64 #1 SMP Debian 3.2.39-2 x86_64 GNU/Linux
+		sudo qemu-nbd -c /dev/nbdX <vdi-file>
+			X (device number nbd0, nbd1...)
+			Partitions: /dev/nbdXp1, /dev/nbdXp2...
+	Detach:
+		qemu-nbd -d /dev/nbdX
+	Notes:
+		sudo partx -a /dev/nbdX
+			Forces kernel to reread pertitions (doesn't fix the absence of max_part=16).
+
+Virtualbox Guest-Additions:
+	Recomended packages:
+		sudo apt-get install dkms
+	(Maybe -yet unknown-) needed packages:
+		sudo apt-get install xserver-xorg xserver-xorg-core
