@@ -1,0 +1,70 @@
+=======================================
+Principios y algoritmos de concurrencia
+- Ricardo Galli
+=======================================
+
+Programación concurrente (Definició):
+	Es la composición de ódulos que se ejecutan independientemente, de forma asíncrona y no determinista.
+
+
+Tècniques:
+	Semàfors:
+		Ley de Kansas:
+			 «Cuando dos trenes se encuentran en un cruce de vias cada uno deberá detenerse completamente y ninguno deberá continuar hasta que el otro se haya ido.»
+			Tolling de senador americà que volia no s'aprovàs el paquet de lleis i es va aprovar.
+		Problemes:
+			Inversió de prioritats.
+
+	Futex:
+		Eviten, a nivell d'usuari, fer una (costosa) cridada a sistema si els processos es poden "entendre entre ells".
+		Si no es fa la cridada al sistema.
+
+
+	Monitors:
+		Ve dels "monitors" antecessors dels sistemes operatius.
+		Java els té nadius.
+		Idea:
+			Mètodes que s'asseguren amb exclusió mutua (vers altres de la mateixa classe).
+			És a dir: És un mutex però a nivell de mètode.
+			Si un s'ha de bloquejar a mitja execució:
+				-> Wait => Es posen "a un costat" perquè un altre pugui entrar.
+
+	Canals:
+		Paper: Article sobre CSP (Communicating Sequencial Processess) -1978-:
+			Processos que només es comuniquen per pa de canals.
+		Ex: Transputer (1983).
+			David May de INMOS con la colaboración de Tony Hoare desarrollaron su lenguaje de programación occam.
+			El projecte va morir arrel de l'aparició del Pentium.
+			Va fallar perquè en aquell moment no hi havia els coneixements sobre canals.
+			Ell creu que reviurà i és el futur.
+			Hi ha qui hi ha fet córrer Linux, però s'ha de carregar cpu per cpu.
+
+	Mermòria transaccional: (El futur).
+		Més senzill.
+		El problema és impleentar-ho de forma eficient.
+		La idea és que a memòria sigui transaccional (com a una BD) i els programes que entrin en zona conflictiva, puguin tornar enrera en cas de discrepancia i refer el camí.
+		Exemple:
+			__transaction_atomic { // Macro del compilador.
+				c++;
+			};
+		El gcc 4.3 ja ho implementa.
+		Mètodes:
+			Mem+oria Transaccional per Software (TSM):
+				TinySTM
+				GCC libitm (de Intel Transactional Memory Compiler and Runtime Appication Binary Interface)
+			Memòria transaccional per Hardware (HTM):
+				- Intel TSX, IBM Power8 i S390
+			Mètode tradicional/HLE:
+				Basat en instrucció reservada del processador:
+					Processadors antics la ignoren:
+					Processidors moderns eviten el CAS i continuen executant però, si hi ha conflicte, tornen enrera i repeteixen.
+
+Llennguatges:
+	Erlang (Armstrong, Virding y Williams, 1986)
+	Newsqueak (Rob Pike, 1988)
+	Concurrent ML (John Reppy, 1993)
+	Aef (Phil Winterbottom, 1995)
+	Limbo (Dorward, Pike y Winterbottom, 1996)
+	Go (Rob Pike, Ken Thompson y Robert Griesemer, 2007)
+
+
