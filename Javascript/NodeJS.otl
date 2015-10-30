@@ -21,11 +21,16 @@ Debugging
 		Browser environment.
 	Console.log
 	Overwritting native functions ;-)
+
 Unit Testing
 	testing
 		https://www.npmjs.com/package/testing
 		npm install --save testing
 	grunt (testnig + grunt)
+
+Automatització:
+	Grunt / Gulp:
+		http://code.tutsplus.com/tutorials/javascript-workflow-automation-using-grunt-and-gulp--cms-24586
 
 
 Bibliografia:

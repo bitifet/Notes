@@ -9,6 +9,19 @@ Bibliografia:
 		http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html
 	Curiositats:
 		http://www.sitepoint.com/shorthand-javascript-techniques/
+	Front-End:
+		http://www.frontendhandbook.com/
+		Headless Browsers:
+			http://phantomjs.org/
+			http://slimerjs.org/
+			http://triflejs.org/
+		Webview development:
+			https://cordova.apache.org/
+			https://github.com/nwjs/nw.js
+			http://electron.atom.io/
+		Native:
+			https://www.nativescript.org/
+			https://facebook.github.io/react-native/
 	Blocs:
 		http://perfectionkills.com/
 		http://robotlolita.me/index.html
