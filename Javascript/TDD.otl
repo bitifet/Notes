@@ -1,0 +1,33 @@
+
+TDD - Test Driven Development
+=============================
+MallorcaJS - Palmaactiva (dt20151110-1915)
+------------------------------------------
+Ponent: Juan Lladó - @jllado
+
+
+Avantatges:
+	Anàlisi previ del problema.
+	Simplicitat.
+	Codi estable.
+	Codi llegible.
+	Confiança.
+
+
+Test Runner: Karma
+	npm install -g karma
+	karma init -> karma.conf.js
+	karma start.
+
+Testing framework: Jasmine
+	npm install jasmine
+	Alternatives:
+		qUnit (de jQuery).
+
+
+Bibliografia:
+	Karma
+		https://karma-runner.github.io/0.13/index.html
+	Jasmine:
+		http://jasmine.github.io/
+
