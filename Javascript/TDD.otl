@@ -77,8 +77,7 @@ Bibliografia:
 		https://mochajs.org/
 		http://webapplog.com/tdd/
 	Chai:
-		General:
-			http://chaijs.com/api/bdd/
-		Chai assert: 
-			http://chaijs.com/api/assert
+		General: http://chaijs.com/api/
+		Chai BDD http://chaijs.com/api/bdd/
+		Chai TDD: http://chaijs.com/api/assert
 
