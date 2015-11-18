@@ -14,15 +14,58 @@ Avantatges:
 	Confiança.
 
 
-Test Runner: Karma
-	npm install -g karma
-	karma init -> karma.conf.js
-	karma start.
+Client-Side (browser):
+	Test Runners: Karma
+		npm install -g karma
+		karma init -> karma.conf.js
+		karma start.
+	Testing framework: Jasmine
+		npm install -g jasmine
+		Alternatives:
+			qUnit (de jQuery).
 
-Testing framework: Jasmine
-	npm install jasmine
-	Alternatives:
-		qUnit (de jQuery).
+Server-Side (NodeJS):
+	Mocha:
+		Install:
+			$ npm install mocha
+		Test cases:
+			describe('Case description' testingFn);
+		Tests:
+			it(msg, testFn);
+			...where testFn = function(done){...done();};
+		Hooks:
+			before(fn);
+			beforeEach(fn);
+			after(fn);
+			afterEach(fn);
+
+
+Asserts:
+	Assert:
+		Usage:
+			var assert = require("assert"); // Native.
+	Chai Assert:
+		Usage:
+			$ npm install --save-dev chai
+			var assert = require("chai").assert;
+		Benefits:
+			assert()
+			assert.fail()
+			assert.ok()
+			assert.notOk()
+			assert.equal()
+			assert.notEqual()
+			assert.strictEqual()
+	Expect.js:
+		Usage:
+			$ npm install --save-dev expect.js
+			var expect = require("expect.js");
+	Chai Expect:
+		Usage:
+			$ npm install --save-dev chai
+			var expect = require("chai").expect;
+
+
 
 
 Bibliografia:
@@ -30,4 +73,12 @@ Bibliografia:
 		https://karma-runner.github.io/0.13/index.html
 	Jasmine:
 		http://jasmine.github.io/
+	Mocha:
+		https://mochajs.org/
+		http://webapplog.com/tdd/
+	Chai:
+		General:
+			http://chaijs.com/api/bdd/
+		Chai assert: 
+			http://chaijs.com/api/assert
 
