@@ -1,5 +1,8 @@
 
 
+Optimization hints:
+	http://rachbelaid.com/postgres-full-text-search-is-good-enough/
+	http://use-the-index-luke.com/sql/explain-plan/postgresql/filter-predicates
 
 Gin Indexes:
 	http://hashrocket.com/blog/posts/exploring-postgres-gin-index

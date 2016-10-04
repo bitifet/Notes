@@ -3,3 +3,7 @@
 "LAN" a través d'internet.
 	ngrok.com
 	TODO: Investigar...
+
+Network monitoring:
+	sudo apt-get install iptraf tcpdump ;-)
+	http://www.packettracernetwork.com/download/download-packet-tracer.html
