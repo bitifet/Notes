@@ -3,3 +3,15 @@
 
 Gin Indexes:
 	http://hashrocket.com/blog/posts/exploring-postgres-gin-index
+
+
+Data Types:
+	http://postgres-data-types.pvh.ca/#1
+
+
+Monitoring tools:
+	https://github.com/julmon/pg_activity
+
+Other:
+	http://kupershmidt.org/pg/10_Things_I_Hate_About_PostgreSQL/
+	http://petereisentraut.blogspot.com.es/2010/03/running-sql-scripts-with-psql.html

@@ -1,0 +1,10 @@
+
+
+
+Filesystems
+	btrfs:
+		https://www.linux.com/learn/how-manage-btrfs-storage-pools-subvolumes-and-snapshots-linux-part-1
+		https://www.linux.com/learn/how-create-and-manage-btrfs-snapshots-and-rollbacks-linux-part-2
+		RANTS:
+			https://blog.pgaddict.com/posts/friends-dont-let-friends-use-btrfs-for-oltp
+
