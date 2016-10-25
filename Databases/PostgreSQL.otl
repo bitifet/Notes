@@ -1,20 +1,98 @@
 
+SQL:
+	 http://dev-pages.info/sql-commands-types-cheat-sheet/
+	Data Definition Language (DDL)
+		 DDL is a set of commands for creating, deleting, renaming databases and tables.
+		CREATE     Creates a new database or a table.  
+		ALTER      Modifies the structure of a database or a table.  
+		DROP       Deletes a database or a table.  
+		TRUNCATE   Removes all table records, including allocated table spaces.  
+	Data Manipulation Language (DML)
+		 DML is a set of commands for inserting, deleting, updating and selecting data from the database.
+		SELECT  Retrieve data from the table.  
+		INSERT  Insert data into a table.  
+		UPDATE  Updates the existing data with new data within a table.  
+		DELETE  Deletes the records from the table.  
+		MERGE   Merge statements to INSERT new records or UPDATE existing records depending on condition matches or not.  
+	Data Control Language (DCL)
+		 DCL is a set of commands for controlling permissions on the data (e.g. defining access rights)
+		GRANT    Gives privileges to a user for accessing database data.  
+		REVOKE   Removes the given privileges.  
+		ANALYZE  Recomputes various statistics(information about index, cluster, table, etc) that RDBMS uses to plan its database queries.  
+		AUDIT    Tracks the occurrence of a specific SQL statement or all SQL statements during the user sessions.  
+		COMMENT  Writes comment to the data table.  
+	Transaction Control Language (TCL)
+		 TCL is a set of commands for controlling transactions which either completes entirely or not at all.
+		BEGIN            Start new transaction if not already started.
+		SAVEPOINT        Defines a new save point and asks the server to remember the current state of the transaction within the current transaction.  It could be later used to Rollback the new changes.  
+		COMMIT           All the elements of the transaction are completed and should now be made persistent and accessible to all concurrent and subsequent transactions.  
+		ROLLBACK         Cancels all changes made to data by that SQL transaction.  
+		SET TRANSACTION  Changes the Isolation level of the transaction (e.g. READ CO 
 
-Optimization hints:
-	http://rachbelaid.com/postgres-full-text-search-is-good-enough/
-	http://use-the-index-luke.com/sql/explain-plan/postgresql/filter-predicates
 
-Gin Indexes:
-	http://hashrocket.com/blog/posts/exploring-postgres-gin-index
 
 
 Data Types:
 	http://postgres-data-types.pvh.ca/#1
 
+CTE/WITH
+	CTE stands for "Common Table Expressions"
 
-Monitoring tools:
-	https://github.com/julmon/pg_activity
+Optimization hints:
+	http://rachbelaid.com/postgres-full-text-search-is-good-enough/
+	http://use-the-index-luke.com/sql/explain-plan/postgresql/filter-predicates
+	Paral·lelization:
+		https://wiki.postgresql.org/wiki/Parallel_Query
+		https://www.postgresql.org/docs/9.6/static/parallel-safety.html
+		https://www.postgresql.org/docs/9.6/static/release-9-6.html#AEN130398
+		http://blog.2ndquadrant.com/how-will-postgres-xl-exploit-the-parallel-query-capabilities-of-postgresql-9-6/
+		http://stackoverflow.com/questions/40015867/parallel-queries-on-cte-for-writing-operations-in-postgresql
+
+Gin Indexes:
+	http://hashrocket.com/blog/posts/exploring-postgres-gin-index
+
+
+
+
+DB Administration
+	Monitoring tools:
+		https://github.com/julmon/pg_activity
+			sudo apt-get install pg-activity
+		Locks:
+			SELECT relation::regclass, * FROM pg_locks WHERE NOT GRANTED
+				from: https://wiki.postgresql.org/wiki/Lock_Monitoring
+
+	Cluster management:
+		pg_lsclusters      
+		pg_ctlcluster
+		pg_createcluster   
+		pg_renamecluster   
+		pg_upgradecluster
+		pg_dropcluster
+
+	Testing:
+		pg_virtualenv
+
+	Backup:
+		pg_dumpall         
+		pg_dump
+		pg_restore
+
+	Replication:
+		pg_receivexlog
+		pg_archivecleanup
+		pg_recvlogical
+
 
 Other:
 	http://kupershmidt.org/pg/10_Things_I_Hate_About_PostgreSQL/
 	http://petereisentraut.blogspot.com.es/2010/03/running-sql-scripts-with-psql.html
+	Cheatsheets:
+		http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf
+
+Curiosities:
+	https://zilder.github.io/blog/2016/10/21/data-rotation-with-pg-pathman/
+
+
+Bibliography:
+	http://databasefriends.blogspot.com.es/2015/05/3-must-read-books-about-database.html

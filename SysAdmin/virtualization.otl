@@ -21,3 +21,11 @@ Virtualbox Guest-Additions:
 		sudo apt-get install dkms
 	(Maybe -yet unknown-) needed packages:
 		sudo apt-get install xserver-xorg xserver-xorg-core
+
+Vagrant:
+	Shared folders permisions:
+		http://jeremykendall.net/2013/08/09/vagrant-synced-folders-permissions/
+
+
+Puppet:
+	https://www.ochobitshacenunbyte.com/2016/10/06/puppet-la-herramienta-para-controlarlo-todo/

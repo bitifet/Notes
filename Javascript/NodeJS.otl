@@ -2,7 +2,10 @@
 
 
 Tutorials:
-	http://nodeschool.io
+	Genèrics:
+		http://nodeschool.io
+	Streams:
+		https://t.co/M2gU7WVcxP
 
 
 
@@ -45,7 +48,7 @@ Bibliografia:
 			http://www.future-processing.pl/blog/on-problems-with-threads-in-node-js/?utm_campaign=Technical%20blog&utm_medium=social&utm_source=twitter
 	Altres:
 		http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js
-	NPM:
+	DOM:
 		DOM-JS: https://www.npmjs.com/package/dom-js
 	NVM (Node Version Manager):
 		https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server
@@ -67,6 +70,11 @@ Bibliografia:
 			http://dailyjs.com/2010/12/27/node-tutorial-7/
 		Part 8: 
 			http://dailyjs.com/2011/01/03/node-tutorial-8/
+	Package Managers:
+		NPM:
+			https://www.npmjs.com
+		YARN:
+			https://hackernoon.com/using-yarn-with-docker-c116ad289d56#.a105svb8f
 
 
 Links: (a revisar):

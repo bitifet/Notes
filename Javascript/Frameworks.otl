@@ -1,7 +1,18 @@
 
 Javascript Frameworks
 
+	jQuery:
+		Performance:
+			https://codingbox.io/10-jquery-performance-tips-tricks-872f170387cc#.6go66q4ni
 	Reactive X (RxJS):
 		http://reactivex.io/rxjs/
 		https://egghead.io/courses/step-by-step-async-javascript-with-rxjs?utm_content=bufferbc156&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
+
+Javascritp Miscellaneous Libraries:
+	Lodash:
+		https://lodash.com/
+	Underscore (older lodash alternative):
+		http://underscorejs.org/
+	OCR:
+		http://tesseract.projectnaptha.com/

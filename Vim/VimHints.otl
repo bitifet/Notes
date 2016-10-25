@@ -1,0 +1,11 @@
+
+
+
+Hints:
+	Syntax hilight
+		:syn sync fromstart
+			https://twitter.com/vcotwdorso/status/285362834404159488?s=03
+	Autocompletion:
+		https://github.com/lifepillar/vim-mucomplete
+	Feeds:
+		https://vimfeed.github.io/feed.atom
