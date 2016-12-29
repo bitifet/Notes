@@ -6,14 +6,15 @@ LVM
 
 Useful commands:
 	Create logical volume of 60GB:
-		lvcreate -L 60G <volume_group> -n <new_volume>
+		lvcreate -L 60G <volume_group> -n <new_volume_name>
 	Create snapshot with 4GB for CoW tables.
-		lvcreate -L 4G -s <original_volume> -n <new_volume>
+		lvcreate -L 4G -s <original_volume> -n <new_volume_name>
 	List of volumes and extends usage:
 		lvs
 	Restore snapshot into its original volume:
 		lvconvert --merge <snapshot_volume>
-
+	Remove logical volume (or snapshot):
+		lvremove <volume>
 
 Howtos:
 	Snapshot Backup:

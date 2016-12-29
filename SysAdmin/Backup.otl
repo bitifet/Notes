@@ -1,0 +1,11 @@
+
+
+Tar-gz with parallel compression:
+	Compression:
+	 $ tar c -C /path/to... myDirectory/ | pigz > fileName.tar.gz
+	Decompression:
+	 $ unpigz -c fileName.tar.gz | tar xv
+		Options:
+			--strip-components=N : Avoid N parent path levels.
+	http://unix.stackexchange.com/a/217254/185464
+

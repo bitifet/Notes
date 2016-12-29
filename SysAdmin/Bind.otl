@@ -1,0 +1,23 @@
+Bind 9
+======
+
+Bind howto (Debian/Ubuntu):
+	https://wiki.debian.org/Bind9
+
+
+Fast configuration (ex: mydomain.local):
+	Software setup:
+		 $ apt-get install bind9 # bind9-doc
+		 $ sudo mkdir /var/log/named
+		 $ sudo chown bind:bind /var/log/named
+		 $ sudo chmod 755 /var/log/named
+	Configuration files:
+		/etc/bind/named.conf.local
+			| zone "mydomain.local" {
+			|     type master;
+			|     
+	Automated (Script):
+		https://github.com/bitifet/bashLib/blob/master/bindSetup.sh
+
+
+
