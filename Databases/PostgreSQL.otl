@@ -55,6 +55,10 @@ Gin Indexes:
 
 
 DB Administration
+	Installing / Upgrading:
+		From Ubuntu LTS:
+			https://www.postgresql.org/download/linux/ubuntu/
+
 	Monitoring tools:
 		https://github.com/julmon/pg_activity
 			sudo apt-get install pg-activity
@@ -74,18 +78,48 @@ DB Administration
 		pg_virtualenv
 
 	Backup:
-		pg_dumpall         
-		pg_dump
-		pg_restore
+		pg_dump:
+			pg_dumpall         
+			pg_dump
+			pg_restore
+		Binary:
+			Full:
+				LVM-Snapshot:
+					| PG_Version: 9.6
+					| Cluster_Name: main
+					| Database LV: /dev/myVolumeGroup/DB
+					| Snapsont LV: /dev/myVolumeGroup/DBsnapshot
+					| Snapsont Mount point: /mnt/DBbackup
+					| Backup file: DBbackup.tgz
+					Create:
+						 $ sudo lvcreate -L 4G -s /dev/myVolumeGroup/DB -n DBsnapshot
+						 $ sudo mkdir -p /mnt/DBbackup
+						 $ sudo mount /dev/myVolumeGroup/DBsnapshot /mnt/DBbackup
+						 $ sudo tar c -C /var/lib/postgresql/9.6 main | pigz > DBbackup.tgz
+						 $ sudo umount /mnt/DBbackup
+						 $ sudo lvremove /dev/myVolumeGroup/DBsnapshot
+					Restore:
+						 $ sudo /etc/init.d/postgresql stop
+						 $ sudo rm -rf /var/lib/postgresql/9.6/main
+						 $ unpigz -c DBbackup.tgz | sudo tar xv -C /var/lib/postgresql/9.6
+						 $ sudo /etc/init.d/postgresql start
+			Incremental:
+
 
 	Replication:
-		pg_receivexlog
-		pg_archivecleanup
-		pg_recvlogical
+		Hot Standby:
+			https://github.com/bitifet/vagrants/blob/master/PostgreSQL/hotStandby.sh
+		PostgreSQL tools
+			pg_receivexlog
+			pg_archivecleanup
+			pg_recvlogical
+		HAProxy:
+			http://bonesmoses.org/2016/12/02/pg-phriday-ambling-architecture/
+
 
 
 Other:
-	http://kupershmidt.org/pg/10_Things_I_Hate_About_PostgreSQL/
+	http://kupershmidt.org/pg/11_Things_I_Hate_About_PostgreSQL/
 	http://petereisentraut.blogspot.com.es/2010/03/running-sql-scripts-with-psql.html
 	Cheatsheets:
 		http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf
