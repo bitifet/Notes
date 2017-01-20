@@ -76,6 +76,10 @@ DB Administration
 
 	Testing:
 		pg_virtualenv
+		TDD
+			pgTAP - Test Anything Protocol for PostgreSQL
+				http://pgtap.org/
+				https://www.depesz.com/2010/06/16/test-driven-development-for-postgresql/
 
 	Backup:
 		pg_dump:
@@ -83,6 +87,8 @@ DB Administration
 			pg_dump
 			pg_restore
 		Binary:
+			pg_start_backup('xxx') / pg_stop_backup():
+				https://www.postgresql.org/message-id/20130406180711.GA27333@raptor.commandosoftware.com
 			Full:
 				LVM-Snapshot:
 					| PG_Version: 9.6
@@ -104,6 +110,8 @@ DB Administration
 						 $ unpigz -c DBbackup.tgz | sudo tar xv -C /var/lib/postgresql/9.6
 						 $ sudo /etc/init.d/postgresql start
 			Incremental:
+				http://wiki.bacula.org/doku.php?id=application_specific_backups:postgresql#incremental_backups_and_point-in-time_recovery_pitr_with_wal_archiving
+				https://www.postgresql.org/docs/8.4/static/continuous-archiving.html
 
 
 	Replication:
