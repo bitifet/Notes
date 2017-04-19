@@ -138,3 +138,60 @@ Curiosities:
 
 Bibliography:
 	http://databasefriends.blogspot.com.es/2015/05/3-must-read-books-about-database.html
+
+
+Advanced tips:
+--------------
+	@@sql@@
+
+    -- With Ordinality (Sorting / identifying aggregated rows):
+    -- ========================================================
+    -- http://www.postgresonline.com/journal/archives/347-LATERAL-WITH-ORDINALITY-numbering-sets.html
+    -- http://stackoverflow.com/questions/38640168/find-position-of-object-in-postgres-jsonb-array?answertab=active#tab-top
+    -- 
+    -- Example:
+    -- --------
+    with test as(
+        select * from (values
+            (0::integer, '{"myArr":[{"name": "Peter", "surname": "Jones"},{"name": "Andrew", "surname": "McQueen"}]}'::jsonb)
+            , (1::integer, '{"myArr":[{"name": "John", "surname": "Wayne"},{"name": "Bob", "surname": "Dylan"}]}'::jsonb)
+        ) as t(id, data)
+    )
+    , expanded as (
+        select
+            id
+            , i
+            , row
+        from test
+            , jsonb_array_elements (data->'myArr')
+                with ordinality arr(row, i)
+        -- Would output:
+        -- -------------
+        -- 
+        --  id | i |                   row                   
+        -- ----+---+------------------------------------------
+        --   0 | 1 | {"name": "Peter", "surname": "Jones"}
+        --   0 | 2 | {"name": "Andrew", "surname": "McQueen"}
+        --   1 | 1 | {"name": "John", "surname": "Wayne"}
+        --   1 | 2 | {"name": "Bob", "surname": "Dylan"}
+        -- (4 rows)
+    )
+    select
+        id
+        , i
+        , row->>'name' as name
+        , row->>'surname' as surname
+    from expanded
+    ;
+    -- Output:
+    -- -------
+    --  id | i |  name  | surname 
+    -- ----+---+--------+---------
+    --   0 | 1 | Peter  | Jones
+    --   0 | 2 | Andrew | McQueen
+    --   1 | 1 | John   | Wayne
+    --   1 | 2 | Bob    | Dylan
+    -- (4 rows)
+
+	@@/sql@@
+
