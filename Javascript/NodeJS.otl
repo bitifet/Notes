@@ -8,10 +8,21 @@ Tutorials:
 		https://t.co/M2gU7WVcxP
 
 
+Internals:
+	Memory limits:
+		https://stackoverflow.com/questions/38558989/node-js-heap-out-of-memory?answertab=active#tab-top
+		Garbage Collector:
+			http://jayconrod.com/posts/55/a-tour-of-v8-garbage-collection
+	Thread Pool
+		process.env.UV_THREADPOOL_SIZE = _size_ (Default = 4).
+
+
 
 Web servers:
 	http
 	Express
+		Client disconnect:
+			https://stackoverflow.com/questions/6572572/node-js-http-server-detect-when-clients-disconnect?answertab=active#tab-top
 
 
 Debugging

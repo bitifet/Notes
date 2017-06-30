@@ -1,6 +1,10 @@
 
 
+CheatSheets
+	The best: http://ndpsoftware.com/git-cheatsheet.html
 
+Branching
+	https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
 (un)Ignore changes of tracked file:
 	http://stackoverflow.com/a/10755704/4243912
