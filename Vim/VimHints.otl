@@ -2,6 +2,13 @@
 
 
 Hints:
+	Spell Checking
+		https://www.linux.com/learn/using-spell-checking-vim
+			ACTIVAR: :setlocal spell spelllang=ca_es
+			DESACTIVAR: :set nospell
+			MOURE ENTRE ERRORS: ]s / [s
+			SUGGERIMENTS: z=
+			ACCEPTAR PARAULA: zg / zG (buffer actual / per sempre).
 	Syntax hilight
 		:syn sync fromstart
 			https://twitter.com/vcotwdorso/status/285362834404159488?s=03
