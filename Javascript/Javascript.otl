@@ -4,8 +4,15 @@
 ES6:
 	Modules:
 		http://2ality.com/2014/09/es6-modules-final.html
-	Iterators:
+	Iterators and Generators:
+		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 		https://scotch.io/amp/tutorials/understanding-the-javascript-forof-loop
+
+Memory Management:
+	Memory Leaks:
+		https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/
+		https://developer.mozilla.org/ca/docs/Web/JavaScript/Memory_Management
+
 
 
 Bibliografia:
