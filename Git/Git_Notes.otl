@@ -8,3 +8,18 @@ Branching
 
 (un)Ignore changes of tracked file:
 	http://stackoverflow.com/a/10755704/4243912
+
+
+Repository software
+	GitLab
+		About: https://about.gitlab.com/
+		Installation: https://about.gitlab.com/installation/
+			Restarting / retrying hit:
+				$ sudo gitlab-ctl reconfigure
+				$ sudo gitlab-ctl restart
+				(Wait a bit...)
+		Requirements:
+			4GB RAM
+			2 Cores
+			Patience: Shows "try again later" page at beginig SPECIALLY if under minimal requirements.
+			Details: https://docs.gitlab.com/ce/install/requirements.html
