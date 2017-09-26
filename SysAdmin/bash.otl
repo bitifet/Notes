@@ -6,3 +6,9 @@ Advanced Bash-Scripting Guide
 	> http://www.tldp.org/LDP/abs/html/index.html
 	String manipulation:
 		> http://www.tldp.org/LDP/abs/html/string-manipulation.html
+
+
+External tools
+	Sed
+		http://www.grymoire.com/Unix/Sed.html
+
