@@ -42,12 +42,14 @@ Unit Testing
 		npm install --save testing
 	grunt (testnig + grunt)
 
-Automatització:
+Automation:
 	Grunt / Gulp:
 		http://code.tutsplus.com/tutorials/javascript-workflow-automation-using-grunt-and-gulp--cms-24586
 	Docker:
 		https://webapplog.com/node-docker/
 
+Compilation (binary generation):
+	https://github.com/pmq20/node-packer
 
 Bibliografia:
 	Express:
