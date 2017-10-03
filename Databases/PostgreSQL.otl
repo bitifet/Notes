@@ -37,6 +37,7 @@ Data Types:
 
 CTE/WITH
 	CTE stands for "Common Table Expressions"
+	Optimization (See Optimization hints -> CTE).
 
 Optimization hints:
 	http://rachbelaid.com/postgres-full-text-search-is-good-enough/
@@ -47,6 +48,8 @@ Optimization hints:
 		https://www.postgresql.org/docs/9.6/static/release-9-6.html#AEN130398
 		http://blog.2ndquadrant.com/how-will-postgres-xl-exploit-the-parallel-query-capabilities-of-postgresql-9-6/
 		http://stackoverflow.com/questions/40015867/parallel-queries-on-cte-for-writing-operations-in-postgresql
+	CTE:
+		https://blog.2ndquadrant.com/postgresql-ctes-are-optimization-fences/
 
 Gin Indexes:
 	http://hashrocket.com/blog/posts/exploring-postgres-gin-index
