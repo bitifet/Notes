@@ -12,3 +12,12 @@ External tools
 	Sed
 		http://www.grymoire.com/Unix/Sed.html
 
+
+Automation
+	cron
+		@reboot
+			 - Commands scheduled at @reboot are executed on cron service startup.
+			 - But ONLY if /var/run/crond.reboot file DOES NOT exist.
+			 - Just after that, cron creates it to prevent @reboot commands to be re-executed on cron service restart.
+			 - Operating System's startup service /etc/init.d/bootclean removes all files in /var/run. That is what cron takes advantage.
+			Details: https://www.unixdaemon.net/linux/how-does-cron-reboot-work/
