@@ -10,7 +10,10 @@ Branching
 	http://stackoverflow.com/a/10755704/4243912
 
 GitHub
-	Markdown syntax: https://guides.github.com/features/mastering-markdown/
+	Markdown syntax:
+		https://guides.github.com/features/mastering-markdown/
+	Security:
+		https://github.com/blog/2470-introducing-security-alerts-on-github
 
 
 Repository software
@@ -26,3 +29,6 @@ Repository software
 			2 Cores
 			Patience: Shows "try again later" page at beginig SPECIALLY if under minimal requirements.
 			Details: https://docs.gitlab.com/ce/install/requirements.html
+
+
+

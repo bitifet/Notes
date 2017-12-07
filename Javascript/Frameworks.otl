@@ -7,6 +7,7 @@ Javascript Frameworks
 	Reactive X (RxJS):
 		http://reactivex.io/rxjs/
 		https://egghead.io/courses/step-by-step-async-javascript-with-rxjs?utm_content=bufferbc156&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+		https://codeburst.io/simple-tip-to-start-coding-in-reactjs-dfbac955b44c
 	NextJs:
 		https://jsmantra.com/next-js-53e9cf4da5af#.qra2dlcga
 		https://jsmantra.com/next-on-next-js-1a134505f346#.gzfbdpgor
@@ -23,3 +24,7 @@ Javascritp Miscellaneous Libraries:
 		http://underscorejs.org/
 	OCR:
 		http://tesseract.projectnaptha.com/
+
+jQuery plugins
+	Timeline:
+		https://ilkeryilmaz.github.io/timelinejs/

@@ -11,6 +11,7 @@ Advanced Bash-Scripting Guide
 External tools
 	Sed
 		http://www.grymoire.com/Unix/Sed.html
+		https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_sed.md
 
 
 Automation

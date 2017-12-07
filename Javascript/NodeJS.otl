@@ -16,7 +16,13 @@ Internals:
 	Thread Pool
 		process.env.UV_THREADPOOL_SIZE = _size_ (Default = 4).
 
+Performance:
+	V8:
+		https://www.nearform.com/blog/node-js-is-getting-a-new-v8-with-turbofan/
 
+Paral·lelization:
+	MultiCore
+		https://codeburst.io/multi-core-nodejs-app-is-it-possible-in-a-single-thread-framework-fe4feaf67f90
 
 Web servers:
 	http
@@ -48,6 +54,17 @@ Automation:
 	Docker:
 		https://webapplog.com/node-docker/
 
+
+Authentication:
+	Passport:
+		https://www.npmjs.com/package/passport
+	Two Factor:
+		https://davidwalsh.name/2fa/amp
+
+Security:
+	Common Mistakes:
+		https://www.youtube.com/watch?v=QSMbk2nLTBk&list=PLfMzBWSH11xYaaHMalNKqcEurBH8LstB8&index=6
+
 Compilation (binary generation):
 	https://github.com/pmq20/node-packer
 
@@ -68,23 +85,6 @@ Bibliografia:
 	NVM (Node Version Manager):
 		https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server
 		https://www.digitalocean.com/community/tutorials/how-to-install-node-js-with-nvm-node-version-manager-on-a-vps
-	Node Tutorial:
-		Part 1: Introduction
-			http://dailyjs.com/2010/11/01/node-tutorial/
-		Part 2: Installation and Skeleton App, source code commit: 4ea936b
-			http://dailyjs.com/2010/11/08/node-tutorial-2/
-		Part 3: RESTful Methods and Testing, source code commit: 39e66cb
-			http://dailyjs.com/2010/11/15/node-tutorial-3/
-		Part 4: Templates, Partials, Creating and Editing Documents, source code commit: f66fdb
-			http://dailyjs.com/2010/11/22/node-tutorial-4/
-		Part 5: Authentication, Sessions, Access Control Middleware, source code commit: 03fe9b
-			http://dailyjs.com/2010/12/06/node-tutorial-5/
-		Part 6: Interface Basics, source code commit: f2261c
-			http://dailyjs.com/2010/12/20/node-tutorial-6/
-		Part 7: Node Library Versions, Jade Tricks, Error Pages, source code commit: 929f5
-			http://dailyjs.com/2010/12/27/node-tutorial-7/
-		Part 8: 
-			http://dailyjs.com/2011/01/03/node-tutorial-8/
 	Package Managers:
 		NPM:
 			https://www.npmjs.com

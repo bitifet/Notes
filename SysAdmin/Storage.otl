@@ -8,3 +8,8 @@ Filesystems
 		RANTS:
 			https://blog.pgaddict.com/posts/friends-dont-let-friends-use-btrfs-for-oltp
 
+File copy
+	cpio vs tar / cp
+		https://web.archive.org/web/20140216142548/http://leftsock.net/~kjw/Ramblings/tar_v_cpio.html
+		https://stackoverflow.com/a/4293196/4243912
+
