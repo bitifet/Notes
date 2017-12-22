@@ -1,5 +1,13 @@
 
 
+IP (ip command)
+	Articles
+		https://www.computerhope.com/unix/ip.htm
+		https://www.linux.com/learn/replacing-ifconfig-ip
+	CheatSheets
+		https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf
+
+
 "LAN" a través d'internet.
 	ngrok.com
 	TODO: Investigar...
