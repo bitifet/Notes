@@ -12,11 +12,21 @@ Network monitoring:
 
 Iptables snippets:
 	Port redirections:
-		sudo iptables -A PREROUTING -t nat -p tcp --dport 80 -j REDIRECT --to-port 1080
-		sudo iptables -A PREROUTING -t nat -p tcp --dport 443 -j REDIRECT --to-port 1443
+		sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 1080
+		sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 1443
+		sudo iptables -t nat -I PREROUTING -p tcp --dport 80 --src 0/0 -j REDIRECT --to-ports 8080
+			To given IP: --dst 192.168.1.5
+			To given interface: -i eth0
 	Iptables save / restore:
 		Save:
 			sudo iptables-save | sudo tee /etc/firewall.iptables
 		(Auto)Restore:
 			sudo crontab -e
 				@reboot /sbin/iptables-restore < /etc/firewall.iptables
+			Onliner :-D
+				(sudo crontab -l; echo "@reboot /sbin/iptables-restore < /etc/firewall.iptables") | sudo crontab /dev/stdin
+
+
+
+
+
