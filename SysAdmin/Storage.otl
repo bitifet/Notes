@@ -1,5 +1,13 @@
 
 
+RAID
+	MDADM
+		Howto:
+			https://www.digitalocean.com/community/tutorials/how-to-create-raid-arrays-with-mdadm-on-ubuntu-16-04
+		NOTES:
+			A RAID device can only be partitioned if it was created with an --auto option given to the mdadm tool
+				https://raid.wiki.kernel.org/index.php/Partitioning_RAID_/_LVM_on_RAID
+			(Same link is valid for LVM...)
 
 Filesystems
 	btrfs:
