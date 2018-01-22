@@ -15,6 +15,7 @@ External tools
 		http://www.grymoire.com/Unix/Sed.html
 		https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_sed.md
 	lshw ("ls hardware")
+	lsblk - List block devices
 
 
 Automation
