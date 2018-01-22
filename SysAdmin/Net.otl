@@ -35,6 +35,13 @@ Iptables snippets:
 				(sudo crontab -l; echo "@reboot /sbin/iptables-restore < /etc/firewall.iptables") | sudo crontab /dev/stdin
 
 
+Miscellaneous utilities
+	Sniffers
+		iptraf
+		tcpdump
+	Ethernet
+		ethtool
 
 
-
+Bookmarks:
+	Ubuntu Networking: https://help.ubuntu.com/lts/serverguide/network-configuration.html

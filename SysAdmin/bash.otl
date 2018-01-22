@@ -1,17 +1,20 @@
-Bash script
-===========
+Bash script and CLI
+===================
 
 
 Advanced Bash-Scripting Guide
 	> http://www.tldp.org/LDP/abs/html/index.html
 	String manipulation:
 		> http://www.tldp.org/LDP/abs/html/string-manipulation.html
+	Colors:
+		> https://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 
 External tools
 	Sed
 		http://www.grymoire.com/Unix/Sed.html
 		https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_sed.md
+	lshw ("ls hardware")
 
 
 Automation

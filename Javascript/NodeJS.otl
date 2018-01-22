@@ -67,6 +67,7 @@ Security:
 
 Compilation (binary generation):
 	https://github.com/pmq20/node-packer
+	https://wiki.debian.org/Javascript/Nodejs/Npm2Deb
 
 Bibliografia:
 	Express:
