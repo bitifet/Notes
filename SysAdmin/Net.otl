@@ -35,6 +35,8 @@ Iptables snippets:
 				(sudo crontab -l; echo "@reboot /sbin/iptables-restore < /etc/firewall.iptables") | sudo crontab /dev/stdin
 
 
-
+VPN
+	Tinc
+		https://www.digitalocean.com/community/tutorials/how-to-install-tinc-and-set-up-a-basic-vpn-on-ubuntu-14-04
 
 
