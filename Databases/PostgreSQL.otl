@@ -1,4 +1,18 @@
 
+
+psql commands:
+	\?             - Command help.
+	\h             - SQL help.
+	\l             - List Databases.
+	\connect       - Connect to another database.
+	\d             - List relations.
+	\d <relation>  - Detailed description of relation.
+	\dt            - List tables.
+	\dn            - List schemas.
+	\e             - Edit last query (save and exit to run edited).
+	\i <file>      - Process SQL in file.
+
+
 SQL:
 	 http://dev-pages.info/sql-commands-types-cheat-sheet/
 	Data Definition Language (DDL)
@@ -115,6 +129,31 @@ DB Administration
 			Incremental:
 				http://wiki.bacula.org/doku.php?id=application_specific_backups:postgresql#incremental_backups_and_point-in-time_recovery_pitr_with_wal_archiving
 				https://www.postgresql.org/docs/8.4/static/continuous-archiving.html
+		Pg_basebackup:
+			https://www.hagander.net/talks/Backup%20strategies.pdf
+			Incremental:
+				https://dba.stackexchange.com/a/125774/107446
+
+
+	Tablespaces
+		 Tablespaces are pain in the ass. Don't use unless if you are REALLY
+		 sure you need them.
+		List tablespaces
+			select * from pg_tablespace;
+		List all tablespaces used in database
+			 > select distinct tablespace from (
+			 >     select tablespace from pg_tables
+			 >     union select distinct tablespace from pg_indexes
+			 > ) as t;
+		List databases using given tablespace
+			Not directly possible (tables are not visible from other databases).
+			You neet do connect each one by one and query.
+		Freeing talbespaces (to be able to remove them)
+			https://discuss.pivotal.io/hc/en-us/articles/202065333-Dropping-Tablespace-Error-Tablespace-xxxx-is-not-Empty-
+				https://discuss.pivotal.io/hc/en-us/articles/202080166
+				https://discuss.pivotal.io/hc/en-us/articles/202040623
+
+
 
 
 	Replication:
@@ -133,6 +172,8 @@ DB Administration
 Languages
 	Plv8
 		https://rymc.io/2016/03/22/a-deep-dive-into-plv8/
+		Window Functions
+			https://goo.gl/2uRTsA
 
 
 Other:
