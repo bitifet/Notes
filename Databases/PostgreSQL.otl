@@ -98,6 +98,19 @@ DB Administration
 				http://pgtap.org/
 				https://www.depesz.com/2010/06/16/test-driven-development-for-postgresql/
 
+	Replication:
+		Hot Standby:
+			https://github.com/bitifet/vagrants/blob/master/PostgreSQL/hotStandby.sh
+			https://e-mc2.net/es/hot-standby-y-streaming-replication
+		PostgreSQL tools
+			pg_receivexlog
+			pg_archivecleanup
+			pg_recvlogical
+		HAProxy:
+			http://bonesmoses.org/2016/12/02/pg-phriday-ambling-architecture/
+		Frameworks:
+			Barman: https://www.pgbarman.org/index.html
+
 	Backup:
 		pg_dump:
 			pg_dumpall         
@@ -133,6 +146,9 @@ DB Administration
 			https://www.hagander.net/talks/Backup%20strategies.pdf
 			Incremental:
 				https://dba.stackexchange.com/a/125774/107446
+		Frameworks:
+			Repmgr: https://repmgr.org/
+
 
 
 	Tablespaces
@@ -153,19 +169,6 @@ DB Administration
 				https://discuss.pivotal.io/hc/en-us/articles/202080166
 				https://discuss.pivotal.io/hc/en-us/articles/202040623
 
-
-
-
-	Replication:
-		Hot Standby:
-			https://github.com/bitifet/vagrants/blob/master/PostgreSQL/hotStandby.sh
-			https://e-mc2.net/es/hot-standby-y-streaming-replication
-		PostgreSQL tools
-			pg_receivexlog
-			pg_archivecleanup
-			pg_recvlogical
-		HAProxy:
-			http://bonesmoses.org/2016/12/02/pg-phriday-ambling-architecture/
 
 
 
