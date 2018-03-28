@@ -8,7 +8,16 @@ Advanced Bash-Scripting Guide
 		> http://www.tldp.org/LDP/abs/html/string-manipulation.html
 	Colors:
 		> https://misc.flogisoft.com/bash/tip_colors_and_formatting
+	More:
+		> https://helpful.knobs-dials.com/index.php/Command_line_and_bash_notes#Safer_scripts
 
+Piping
+	https://workaround.org/linuxtip/pipes
+
+Daemonization
+	https://www.maketecheasier.com/run-bash-commands-background-linux/
+	https://stackoverflow.com/a/26912222/4243912
+	https://superuser.com/questions/1190854/disowned-jobs-still-stop-on-exit
 
 External tools
 	Sed
