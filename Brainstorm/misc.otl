@@ -1,0 +1,37 @@
+
+
+html2ansi
+	HTML to ANSI-txt converter.
+
+
+System monitorization tool
+	Pasive server: Just listen to events.
+		Server listens though http API.
+			Accepts multiple report formats:
+				txt (minimally formatted).
+				json
+				yaml
+				xml???? 
+		Autentication:
+			Clients set its own credentials on registering.
+			In fact clients don't register themselves but its monitored services.
+			TODO: Consider (if possible) public-key authentication (set public key on registration).
+			Failed authentication attempts are automatically reported.
+		Track events and statuses:
+		Events and statuses can be checked whough Web UI.
+		Events can also be reported though multiple systems:
+			Email
+			Telegram
+			Push notifications
+			Etc... (Modular middleware will let implement your own ones).
+				For example to simply switch on simple red light.
+	Clients (typically cron scripts) are responsible to send reports to server.
+		Reports should include:
+			Status: (Ok, Info, Warning, Error...)
+			Data: (Informational)
+			Host Name.
+			Service Name.
+			Checking Frequency:
+				Only on first report or to reconfigure.
+				Server remembers and automatically alert if not receive next when expected.
+
