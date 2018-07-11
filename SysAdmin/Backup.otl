@@ -9,3 +9,6 @@ Tar-gz with parallel compression:
 			--strip-components=N : Avoid N parent path levels.
 	http://unix.stackexchange.com/a/217254/185464
 
+Restic
+	https://restic.net/
+

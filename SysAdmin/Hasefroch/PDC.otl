@@ -1,0 +1,148 @@
+Administración de Hasefroch Server
+==================================
+
+Migració 2003 a 2012.
+	L'han simplificada.  (Abans no existia)
+	Cada PC té els seus usuaris, grups i contrasenyes.
+
+Antigament
+
+	NT
+		1 BD de seguretat (PDC).
+			Cont. Dom 1 - PDC (Primary Domain Controller)
+			Cont. Dom 2 - BDC (Backup Domain Controller)
+			Cont. Dom 3 - BDC (Backup Domain Controller)
+
+Posteriors: (Pas de cutre a caòtic).
+	2000 - 2012: Volen copiar LDAP. => Rols.
+		Rols:
+			PDC
+			Noms
+			Infraestructura
+			RID (no Sid)
+			Schema (LDAP)
+		Global Catalog: (No considerat com a rol).
+			Rol d'autenticació.
+			Només ho poden ser els controladors de domini.
+			Es pot montar com a "RODC" (Read Only Domain Controller):
+				Màquines remotes per autentificació que no volem que es puguin modificar.
+		DNS
+
+
+
+
+Pujar a controlador de domini
+	Resultat:
+		Es crea una nova BD, la SAM.
+			SAM: "Base de Dades de Seguretat".
+		La BD local desapareixerà.
+			En el primer es migra a la SAM.
+			En la resta es replica la SAM dels següents.
+	cmd: dcpromo -> Guisard.
+		* Només a servidors (fins al 2008).
+		* No fer servir el "modo avanzado".
+		* Al primer:
+			Sel·leccionar "Crear un «forest»nuevo".
+		* Al FQDN:
+			No fer servir .local
+		* Nivel funcional del bosque:
+			"Securització del LDAP".
+			"El més amunt que es pugui".
+			Si hi ha clients ;X-P, màxim 2008 sense "R2".
+		* Demanarà si vols DNS (a no ser que haguem sel·leccionat de 2012 per "amunt").
+			Si li dius que no ferà servir netbios fins que peti.
+
+		* Directoris (deixar valors per defecte):
+			NTDS
+			NDS
+			SYSVOL: Polítiques
+		* Contrassenya de recuperació del domini:
+			És la contrasenya de l'usuari "intern" per a recuperar la SAM.
+	Després:
+		Usuarios y equipos
+		Herramientas de sistema:
+			Dominios y confianzas.
+				Maestro de operaciones:
+					RID: Dona els identificadors.
+					PDC: Dominios y confianzas.
+					Infrestructures: Domain Master.
+		Parrafada:
+			Para el esquema hay que registrar ésta dell:
+				regsv32shmmgmt.dll
+				Ahora hay que ...
+		Configurar DNS.
+			A 127.0.0.1 o el que correspongui...
+			Al 2008 ho fa automàticament. Però posa els vells a :
+				DNS -> Propiedades -> Reenviadores. 
+				...s'hi han de treure per evitar que es consultin.
+				Això ho fa per si hi hagués un bloqueig (firewall) als dns arrel.
+
+
+
+Nombre de controladors de domini:
+	Mínim 1.
+
+	PDC:
+		Serveix als BDCs
+		Sense Gobal Catalog.
+			O Global Catalog només per el mateix.
+		DNS:
+			Primari: Ell mateix.
+			Secundaris: BDC1 i BDC2.
+
+	BDC1:
+		Global Catalog
+		DNS:
+			Primari: PDC.
+			Secundaris: Ell mateix.
+		DHCP:
+			Només en 2012 (perquè replica).
+	BDC2: Igual que BDC1...
+
+
+	Llocs:
+		Global Catalog: BDC1 i BDC2.
+		DNS: BDC1 i BDC2.
+
+
+
+Migració a 2012:
+	Terminals:
+		Posar-li les DNS del nou controlador.
+		Afegir-la al domini.
+	DCpromo:
+		Obrir "administrador del servidor".
+		Administrar - Agregar roles o características -
+			(siguientes...)
+			A Roles de servidor:
+				Marcar "Servicios de dominio de active directory".
+					(Demana confirmació).
+			(siguientes...)
+
+		En tancar apareix bandera (alarma) en "Administrador del servidor"
+			Click.
+			Diu que s'ha instal·lat la promoció a controlador de domini. Però encara s'ha d'executar.
+			Click a "Promover...."
+		... -> Primera opció: Agregar a un controlador de dominio existente
+				(excepte al primer).
+			(siguientes...)
+			Especifiqui
+				[x]DNS
+				[x]Global Catalog
+				[ ]De sólo lectura (RODC)
+			Error: No se puede crear una delegación  para éste servidor DNS.
+				Ignorar.
+			Replicar desde: "Cualquier controlador de dominio"
+			(siguientes...)
+			Ignorar advertencias.
+			Instalar.   (i creure't que això és normal i la polla..)
+
+		Ara al "maestro de operaciones", si fas "un truco", "te sale ésto y ya está".
+
+
+
+
+
+
+
+

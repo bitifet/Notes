@@ -64,6 +64,8 @@ Optimization hints:
 		http://stackoverflow.com/questions/40015867/parallel-queries-on-cte-for-writing-operations-in-postgresql
 	CTE:
 		https://blog.2ndquadrant.com/postgresql-ctes-are-optimization-fences/
+	Statistics:
+		https://www.citusdata.com/blog/2018/03/06/postgres-planner-and-its-usage-of-statistics/
 
 Gin Indexes:
 	http://hashrocket.com/blog/posts/exploring-postgres-gin-index
@@ -129,6 +131,7 @@ DB Administration
 			Incremental:
 				http://wiki.bacula.org/doku.php?id=application_specific_backups:postgresql#incremental_backups_and_point-in-time_recovery_pitr_with_wal_archiving
 				https://www.postgresql.org/docs/8.4/static/continuous-archiving.html
+				PITR recovery: https://www.postgresql.org/docs/8.4/static/continuous-archiving.html#BACKUP-PITR-RECOVERY
 		Pg_basebackup:
 			https://www.hagander.net/talks/Backup%20strategies.pdf
 			Incremental:
@@ -174,6 +177,11 @@ Languages
 		https://rymc.io/2016/03/22/a-deep-dive-into-plv8/
 		Window Functions
 			https://goo.gl/2uRTsA
+
+
+Performance
+	Statistics
+		https://www.citusdata.com/blog/2018/03/06/postgres-planner-and-its-usage-of-statistics/
 
 
 Other:

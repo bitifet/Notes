@@ -1,0 +1,43 @@
+
+
+
+Xarxa demo:
+	PCs:
+		PDC
+		BDC
+		Terminal Server
+			Hasefroch Server.
+			No manté "Active Diréctory".
+			No té global catalog.
+		Hasefroch 10.
+			Hasefroch Client.
+	Adreça: 192.1.3.0
+
+
+Xarxa actual:
+	PCs:
+		PDC: 2008
+			Avior
+		BDC: 2008
+			Akamar
+		TS: 2003
+			Aldebaran
+		FS: 2003 - Pendent fer "dcpromo".
+			Vega
+
+
+DFS - "Distributed File System"
+	Unifica l'espaï de noms hasefroch.
+	Es pot montar:
+		Integrat a l'active directory.
+		Standalone.
+	Servidors:
+		Necessitaran Rol DFS Namespace
+		Es pot fer que un PC sigui rèplica d'un altre.
+	Arbre:
+		Parteix d'una arrel.
+		Més d'un servidor pot assumir el rol de root.
+		Els roots han de ser controladors de domini.
+
+
+

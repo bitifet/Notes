@@ -1,10 +1,16 @@
 
 
+Tutorials
+	https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
+
 CheatSheets
 	The best: http://ndpsoftware.com/git-cheatsheet.html
 
 Branching
 	https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
+Stash
+	https://www.atlassian.com/git/tutorials/saving-changes/git-stash#stashing-your-work
 
 (un)Ignore changes of tracked file:
 	http://stackoverflow.com/a/10755704/4243912

@@ -5,9 +5,13 @@ Precompilers
 		http://sass-lang.com/
 		https://www.sitepoint.com/sass-functions-kick-start-style-sheets/
 
+Modules
+	https://github.com/css-modules/css-modules/blob/master/README.md
+
 Frameworks
 	Material-CSS: http://www.material-css.com/#/
 	Bootstrap: http://startbootstrap.com/
+		Bootstrap Native: https://www.sitepoint.com/use-bootstrap-components-without-jquery/?utm_content=bufferfa813&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
 Media Print
 	https://www.sitepoint.com/community/t/using-css-for-print-media-pdf/5612
@@ -22,6 +26,8 @@ Resources
 		http://codepen.io/wallaceerick/pen/ojtal
 	Animations:
 		https://github.com/christinecha/choreographer-js
+	Icons:
+		http://cssicon.space
 
 Bookmarks
 	Maintainability:

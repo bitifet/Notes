@@ -25,7 +25,12 @@ External tools
 		https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_sed.md
 	lshw ("ls hardware")
 	lsblk - List block devices
+	To explore:
+		Exa ("ls with esteroids")
+			https://lamiradadelreplicante.com/2018/04/10/exa-alternativa-al-comando-ls-escrita-en-rust/
 
+/Proc
+	https://twitter.com/b0rk/status/981159808832286720/photo/1
 
 Automation
 	cron

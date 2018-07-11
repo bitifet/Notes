@@ -39,8 +39,11 @@ Debugging
 	Node-inspector
 		Available in npm.
 		Browser environment.
-	Console.log
-	Overwritting native functions ;-)
+	Pedestrian:
+		Console.log
+		Overwritting native functions ;-)
+	Articles
+		https://codeburst.io/understanding-and-debugging-in-nodejs-fe6d7ab2f362
 
 Unit Testing
 	testing
