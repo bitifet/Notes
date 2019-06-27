@@ -29,6 +29,8 @@ Web servers:
 	Express
 		Client disconnect:
 			https://stackoverflow.com/questions/6572572/node-js-http-server-detect-when-clients-disconnect?answertab=active#tab-top
+		http/2:
+			https://webapplog.com/http2-node/
 
 
 Debugging
@@ -44,6 +46,7 @@ Debugging
 		Overwritting native functions ;-)
 	Articles
 		https://codeburst.io/understanding-and-debugging-in-nodejs-fe6d7ab2f362
+		https://stackoverflow.com/a/52039811/4243912
 
 Unit Testing
 	testing
@@ -54,6 +57,8 @@ Unit Testing
 Automation:
 	Grunt / Gulp:
 		http://code.tutsplus.com/tutorials/javascript-workflow-automation-using-grunt-and-gulp--cms-24586
+	Gulp:
+		https://engineroom.teamwork.com/10-things-to-know-about-gulp-2e99176f9c74
 	Docker:
 		https://webapplog.com/node-docker/
 
