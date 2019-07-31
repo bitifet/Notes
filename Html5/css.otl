@@ -17,6 +17,7 @@ Frameworks
 		Bootstrap Native: https://www.sitepoint.com/use-bootstrap-components-without-jquery/?utm_content=bufferfa813&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
 Media Print
+	https://flaviocopes.com/css-printing/
 	https://www.sitepoint.com/community/t/using-css-for-print-media-pdf/5612
 	Paging:
 		https://stackoverflow.com/questions/21032137/sticking-custom-footer-on-each-page-to-bottom-while-printing
@@ -32,6 +33,10 @@ Resources
 		https://github.com/christinecha/choreographer-js
 	Icons:
 		http://cssicon.space
+
+Techniques
+	Centering
+		https://flaviocopes.com/css-centering/
 
 Bookmarks
 	Maintainability:
