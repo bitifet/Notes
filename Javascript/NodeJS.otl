@@ -48,11 +48,15 @@ Debugging
 		https://codeburst.io/understanding-and-debugging-in-nodejs-fe6d7ab2f362
 		https://stackoverflow.com/a/52039811/4243912
 
-Unit Testing
-	testing
-		https://www.npmjs.com/package/testing
-		npm install --save testing
-	grunt (testnig + grunt)
+Testing
+	General
+		Cypress
+			https://www.cypress.io/
+	Unit Testing
+		testing
+			https://www.npmjs.com/package/testing
+			npm install --save testing
+		grunt (testnig + grunt)
 
 Automation:
 	Grunt / Gulp:

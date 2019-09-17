@@ -37,6 +37,8 @@ Resources
 Techniques
 	Centering
 		https://flaviocopes.com/css-centering/
+	Clamping (limiting text lines)
+		https://css-tricks.com/almanac/properties/l/line-clamp/
 
 Bookmarks
 	Maintainability:

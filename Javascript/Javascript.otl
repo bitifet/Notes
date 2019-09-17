@@ -8,6 +8,10 @@ ES6:
 	Iterators and Generators:
 		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 		https://scotch.io/amp/tutorials/understanding-the-javascript-forof-loop
+	Symbols:
+		toPrimitive: https://mobile.twitter.com/joelnet/status/1159570107456204801?s=19
+	Private class fields:
+		https://flaviocopes.com/javascript-private-class-fields/
 
 Memory Management:
 	Memory Leaks:
@@ -17,6 +21,26 @@ Memory Management:
 Data Types:
 	https://codeburst.io/objects-and-hash-tables-in-javascript-a472ad1940d9
 
+Async:
+	Tasks vs Microtasks (setTimeout, setImmediate, nextTick, promises...)
+		https://twitter.com/joelnet/status/1172155409949483008?s=09
+			> let x = 0;
+			> console.log(`${++x} Start`); // 1 Start
+			> setTimeout(() => console.log(`${++x} setTimeout`)); // 7 setTimeout
+			> setImmediate(() => console.log(`${++x} setImmediate`)); //6 setImmediate
+			> Promise.resolve()
+			>     .then(() => console.log(`${++x} Promise A`)) // 4 Promise A
+			>     .then(() => console.log(`${++x} Promise B`)) // 4 Promise B
+			> ;
+			> process.nextTick(() => console.log(`${++x} process.nextTick`)); // 3 process.nextTick
+			> console.log(`${++x} End`); // 2 End
+			> // 1 Start
+			> // 2 End
+			> // 3 process.nextTick
+			> // 4 Promise A
+			> // 5 Promise B
+			> // 6 setImmediate
+			> // 7 setTimeout
 
 Bibliografia:
 	Articles diversos:

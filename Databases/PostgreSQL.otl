@@ -69,6 +69,7 @@ Optimization hints:
 
 Gin Indexes:
 	http://hashrocket.com/blog/posts/exploring-postgres-gin-index
+	https://www.postgresql.org/docs/9.6/pgtrgm.html
 
 
 
@@ -195,6 +196,11 @@ Other:
 
 Curiosities:
 	https://zilder.github.io/blog/2016/10/21/data-rotation-with-pg-pathman/
+
+
+Administration:
+	Recover admin password:
+		https://fluca1978.github.io/2019/06/27/PostgreSQLSingleMode.html?utm_source=pganalyze
 
 
 Bibliography:
