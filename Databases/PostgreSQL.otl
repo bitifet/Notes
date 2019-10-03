@@ -56,6 +56,9 @@ CTE/WITH
 Optimization hints:
 	http://rachbelaid.com/postgres-full-text-search-is-good-enough/
 	http://use-the-index-luke.com/sql/explain-plan/postgresql/filter-predicates
+	SD storage:
+		random_page_cost: 1 ~ 2 (vs 4 -default-)
+		https://stackoverflow.com/a/52833441/4243912
 	Paral·lelization:
 		https://wiki.postgresql.org/wiki/Parallel_Query
 		https://www.postgresql.org/docs/9.6/static/parallel-safety.html
@@ -66,6 +69,8 @@ Optimization hints:
 		https://blog.2ndquadrant.com/postgresql-ctes-are-optimization-fences/
 	Statistics:
 		https://www.citusdata.com/blog/2018/03/06/postgres-planner-and-its-usage-of-statistics/
+	HAVING Clause:
+		https://twitter.com/b0rk/status/1172872684327383040?s=09
 
 Gin Indexes:
 	http://hashrocket.com/blog/posts/exploring-postgres-gin-index

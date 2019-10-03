@@ -26,6 +26,10 @@ Bookmarks:
 	Miscellaneous tips:
 		https://dalibornasevic.com/posts/43-12-vim-tips
 
+Plugins:
+	Linediff:
+		https://github.com/AndrewRadev/linediff.vim/blob/master/doc/linediff.txt
+
 Others:
 	Profile Optimization:
 		https://github.com/bchretien/vim-profiler
