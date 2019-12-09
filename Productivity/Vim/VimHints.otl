@@ -33,3 +33,6 @@ Plugins:
 Others:
 	Profile Optimization:
 		https://github.com/bchretien/vim-profiler
+	HTML Screenshot:
+		:TOhtml
+		https://andrewra.dev/2019/10/05/from-vim-to-presentation-slides/

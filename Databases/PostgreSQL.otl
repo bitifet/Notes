@@ -118,6 +118,8 @@ DB Administration
 			http://bonesmoses.org/2016/12/02/pg-phriday-ambling-architecture/
 		Frameworks:
 			Barman: https://www.pgbarman.org/index.html
+		Changes since PGv12
+			https://www.2ndquadrant.com/en/blog/replication-configuration-changes-in-postgresql-12/
 
 	Backup:
 		pg_dump:

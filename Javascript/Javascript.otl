@@ -12,6 +12,29 @@ ES6:
 		toPrimitive: https://mobile.twitter.com/joelnet/status/1159570107456204801?s=19
 	Private class fields:
 		https://flaviocopes.com/javascript-private-class-fields/
+	New operators:
+		Optional chaining operator (?.)
+			 foo?.bar?.baz
+		Nullish coalescing operator (??)
+			 function(){
+			   return (null ?? 42) === 42 &&
+			     (undefined ?? 42) === 42 &&
+			     (false ?? 42) === false &&
+			     ('' ?? 42) === '' &&
+			     (0 ?? 42) === 0 &&
+			     isNaN(NaN ?? 42);
+			 } 
+
+
+Internationalizaton API (Intl)
+	Date & Time:
+		Intl.RelativeTimeFormat
+		https://twitter.com/wesbos/status/1184893536707207168?s=09
+		Polyfill: https://github.com/catamphetamine/relative-time-format
+		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat
+		Alternative Libraries:
+			Moment
+			Date-fns: (lighter) https://date-fns.org/
 
 Memory Management:
 	Memory Leaks:

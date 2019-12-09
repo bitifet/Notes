@@ -1,5 +1,7 @@
 
 
+New Features Support:
+	https://node.green/
 
 Tutorials:
 	Genèrics:
@@ -13,6 +15,7 @@ Internals:
 		https://stackoverflow.com/questions/38558989/node-js-heap-out-of-memory?answertab=active#tab-top
 		Garbage Collector:
 			http://jayconrod.com/posts/55/a-tour-of-v8-garbage-collection
+			https://medium.com/javascript-in-plain-english/memory-leaks-and-garbage-collection-%EF%B8%8F-in-javascript-you-need-to-know-this-3fa8173e8b3c
 	Thread Pool
 		process.env.UV_THREADPOOL_SIZE = _size_ (Default = 4).
 
