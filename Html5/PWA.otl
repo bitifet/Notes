@@ -1,11 +1,15 @@
 
 
 Articles:
+	https://developers.google.com/web/progressive-web-apps/
+	https://levelup.gitconnected.com/deploying-your-first-serverless-node-js-api-to-aws-lambda-eb34044b1fb5
 	https://medium.com/dev-channel/learn-how-to-build-a-pwa-in-under-5-minutes-c860ad406ed
 	https://codeburst.io/all-you-need-to-know-about-progressive-web-app-4ba73368da66
 	https://geekyminds.co.in/what-are-progressive-web-apps/
 	https://www.freecodecamp.org/news/progressive-web-apps-101-the-what-why-and-how-4aa5e9065ac2/
 
+Webpack:
+	https://webpack.js.org/guides/progressive-web-application/
 
 Nuances:
 	Display modes

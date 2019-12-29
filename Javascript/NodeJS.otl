@@ -26,6 +26,8 @@ Performance:
 Paral·lelization:
 	MultiCore
 		https://codeburst.io/multi-core-nodejs-app-is-it-possible-in-a-single-thread-framework-fe4feaf67f90
+	Cluster
+		https://medium.com/javascript-in-plain-english/understanding-the-cluster-in-node-js-1cc0826cb0ed
 
 Web servers:
 	http
