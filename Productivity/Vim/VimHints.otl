@@ -25,6 +25,8 @@ Bookmarks:
 	https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 	Miscellaneous tips:
 		https://dalibornasevic.com/posts/43-12-vim-tips
+	Scripting:
+		https://www.arp242.net/effective-vimscript.html
 
 Plugins:
 	Linediff:
