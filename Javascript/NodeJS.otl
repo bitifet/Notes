@@ -27,7 +27,7 @@ Paral·lelization:
 	MultiCore
 		https://codeburst.io/multi-core-nodejs-app-is-it-possible-in-a-single-thread-framework-fe4feaf67f90
 	Cluster
-		https://medium.com/javascript-in-plain-english/understanding-the-cluster-in-node-js-1cc0826cb0ed
+		https://dev.to/acanimal/understanding-the-nodejs-cluster-module-14-2bi
 
 Web servers:
 	http

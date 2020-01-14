@@ -1,4 +1,17 @@
 
+Free SSL Certificates with Certbot
+	Install certbot:
+		sudo apt-get install certbot
+	Create:
+		sudo certbot certonly --manual --preferred-challenges http -d <domain>
+	Renew:
+		sudo certbot renew
+	Caveats:
+		DNSSEC
+			If your DNS server has DNSSEC enabled, you will need to add a CAA
+			register pointing to letsencrypt.org.
+			...and your DNS provider my not allow to create it (at least I
+			couldn't with CDMON. Also not -yet- complained).
 
 
 Apache SSL:

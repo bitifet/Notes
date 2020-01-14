@@ -5,6 +5,8 @@ ES6:
 	Modules:
 		http://2ality.com/2014/09/es6-modules-final.html
 		https://medium.com/web-on-the-edge/es-modules-in-node-today-32cff914e4b
+		Loader Implementation:
+			https://www.html5rocks.com/en/tutorials/speed/script-loading/
 	Iterators and Generators:
 		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 		https://scotch.io/amp/tutorials/understanding-the-javascript-forof-loop
@@ -98,6 +100,7 @@ Bibliografia:
 		http://robotlolita.me/index.html
 	Testing:
 		https://testingjavascript.com/
+		https://flaviocopes.com/jest/
 
 Recopilatoris:
 	https://github.com/ericelliott/essential-javascript-links
