@@ -1,0 +1,16 @@
+
+
+Hardware:
+	DVB-T
+	DVB-T2 - Fucking new standard
+		https://blog.linuxserver.io/2017/02/19/how-to-set-up-tvheadend-with-your-dvb-t2-receiver/
+		Devices:
+			Geniatech T230
+				https://www.linuxtv.org/wiki/index.php/Geniatech_T230
+				Available on Amazon.
+				Well supported (not yet tested by myself)
+
+Manual scan:
+	w_scan -ft -c ES
+	(Also works: w_scan -ft)
+
