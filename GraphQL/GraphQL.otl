@@ -3,6 +3,8 @@
 Libraries
 	Apollo
 		https://flaviocopes.com/apollo/
+		Examples
+			https://github.com/wesbos/advanced-react-rerecord/blob/master/frontend/lib/withData.js#L35-L40
 	GraphiQL
 
 PostgreSQL
