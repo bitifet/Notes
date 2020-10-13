@@ -25,6 +25,9 @@ Media Print
 CSS Grid
 	https://mozilladevelopers.github.io/playground/
 	https://css-tricks.com/snippets/css/complete-guide-grid/
+	Stacking:
+		Use "pointer-events: none" and "pointer-events: initial" to stack
+		grids for layered floating positioning.
 
 Resources
 	Pure CSS Tabs:
@@ -39,6 +42,12 @@ Techniques
 		https://flaviocopes.com/css-centering/
 	Clamping (limiting text lines)
 		https://css-tricks.com/almanac/properties/l/line-clamp/
+	Clipping:
+		Clip path: https://bennettfeely.com/clippy/
+
+Hacks:
+	Css block outline:
+		https://dev.to/gajus/my-favorite-css-hack-32g3
 
 Bookmarks
 	Maintainability:

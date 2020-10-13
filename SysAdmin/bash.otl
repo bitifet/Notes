@@ -14,6 +14,13 @@ Advanced Bash-Scripting Guide
 Piping
 	https://workaround.org/linuxtip/pipes
 
+Wilcards
+	!! => last command
+	!* => args from last command
+	!$ => last arg from last command
+	!c => last command starting with c
+	^c => remove letter c from last command
+
 Daemonization
 	https://www.maketecheasier.com/run-bash-commands-background-linux/
 	https://stackoverflow.com/a/26912222/4243912

@@ -40,8 +40,10 @@ Internationalizaton API (Intl)
 
 Memory Management:
 	Memory Leaks:
+		https://blog.appsignal.com/2020/05/06/avoiding-memory-leaks-in-nodejs-best-practices-for-performance.html?utm_source=boostedblogpost&utm_medium=twitter&utm_campaign=node-memory-leak
 		https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/
 		https://developer.mozilla.org/ca/docs/Web/JavaScript/Memory_Management
+		https://nolanlawson.com/2020/02/19/fixing-memory-leaks-in-web-applications/amp/
 
 Data Types:
 	https://codeburst.io/objects-and-hash-tables-in-javascript-a472ad1940d9
@@ -66,6 +68,9 @@ Async:
 			> // 5 Promise B
 			> // 6 setImmediate
 			> // 7 setTimeout
+
+Benchmarks:
+	https://perf.link
 
 Bibliografia:
 	Articles diversos:

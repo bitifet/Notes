@@ -2,3 +2,23 @@
 JWT - JSON Web Tokens
 	https://www.freecodecamp.org/news/what-are-json-web-tokens-jwt-auth-tutorial/amp
 
+Tricks
+	Country Code Emoji
+		const emojiFlag = (function(){
+			// Credits: https://twitter.com/asaolu_elijah/status/1250386398718373890
+			const cBase = 127397;
+			return {
+				cCode2Emoji: cCode => [...cCode.toUpperCase()]
+					.map(
+						char=>String
+						.fromCodePoint(char.charCodeAt(0)+cBase)
+					)
+					.join('')
+				,
+				Emoji2cCode: e=>[...e].map(
+					cp=>String
+						.fromCharCode(cp.codePointAt(0)-cBase)
+				),
+			};
+		})();
+
