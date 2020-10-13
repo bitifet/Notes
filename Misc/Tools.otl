@@ -9,3 +9,19 @@ Http Reverse Proxy
 
 Resume Generator
 	https://css-tricks.com/how-to-build-your-resume-on-npm/
+
+Images
+	B&W to Color:
+		https://github.com/jantic/DeOldify/blob/master/README.md
+
+Google search
+	https://twitter.com/ravinwashere/status/1249038047561134080
+		Asterisk*     -> use a asterisk "*" to find the words or phrases that you can't remember.
+		Site:         -> use "site:" to search with in specific website.
+		Quotations "" ->  search for exact phrases using quotations"".
+		Minus -       ->  use "-" to exclude certain keywords from your search results.
+		Time... Time  -> you can search within a time frame using "...".
+		Or            -> use " OR"  when you can't remember which topic you're thinking of.
+		type:pdf      -> to search the links of pdf documents
+		10..200       -> to search a range of number (works also with money: $100..$300)
+

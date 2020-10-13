@@ -13,7 +13,8 @@ IP (ip command)
 	TODO: Investigar...
 
 Network monitoring:
-	sudo apt-get install iptraf tcpdump ;-)
+	sudo apt-get install iptraf tcpdump nethogs;-)
+		https://twitter.com/climagic/status/1257313224510197761?s=09
 	http://www.packettracernetwork.com/download/download-packet-tracer.html
 
 
