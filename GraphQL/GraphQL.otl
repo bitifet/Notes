@@ -1,6 +1,8 @@
 
 Tutorials:
 	https://graphql.org/learn/
+	Express:
+		https://graphql.org/graphql-js/running-an-express-graphql-server/
 
 Libraries
 	Apollo
@@ -24,3 +26,5 @@ Tutorials
 	Apollo:
 		https://www.apollographql.com/
 
+Books
+	https://github.com/GraphQLCollege/fullstack-graphql
